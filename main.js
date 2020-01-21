@@ -17,7 +17,6 @@
             },
             handleClickRegister: function handleClickRegister(e){
                 e.preventDefault();
-                var $fragment = document.createDocumentFragment();
                 var tableCar = $('[data-js="table-cars"]');
                 tableCar.appendChild(app.createNewCar());
             },
