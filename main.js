@@ -13,7 +13,9 @@
             },
             initEvent: function initEvent(){
                 var $buttonRegister = $('[data-js="button-register"]');
+                var $buttonRemove = $('[data-js="button-remove"]');
                 $buttonRegister.addEventListener('click', app.handleClickRegister, false);
+                $buttonRemove.addEventListener('click', app.removeCar, false);
             },
             handleClickRegister: function handleClickRegister(e){
                 e.preventDefault();
@@ -48,6 +50,10 @@
                 $tr.appendChild($tdColor);
 
                 return $fragment.appendChild($tr);
+            },
+            removeCar: function removeCar(e){
+                e.preventDefault();
+                
             },
             companyInfo: function companyInfo(){
                 var ajax = new XMLHttpRequest();
