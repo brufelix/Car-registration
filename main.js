@@ -53,7 +53,9 @@
             },
             removeCar: function removeCar(e){
                 e.preventDefault();
-                
+                var elementDad = document.querySelector('tbody');
+                if(!!elementDad.lastElementChild)
+                    elementDad.removeChild(elementDad.lastElementChild);
             },
             companyInfo: function companyInfo(){
                 var ajax = new XMLHttpRequest();
